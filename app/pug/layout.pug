@@ -1,10 +1,13 @@
+include helpers/config
+include helpers/mixins
+
+block variables
 doctype html
 html(lang="ru")
 	head
 		include assets/meta
 		include bem/index
-		include helpers/config
-		include helpers/mixins
+		
 		block css
 			+css("css/style.css")
 		block js

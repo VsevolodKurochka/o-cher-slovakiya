@@ -30,7 +30,7 @@
 		padding: 25px 0;
 		@include m('scrolled'){
 			padding: 15px;
-			background-color: $color-brand-2;
+			background-color: darken($color-brand-2, 20%);
 		}
 	}
 }

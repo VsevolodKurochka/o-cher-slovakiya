@@ -30,70 +30,74 @@ $quadro-size_md: 204px;
 	&_style-1 &{
 		@include e('part'){
 			@include m('3'){
-				background-color: $color-brand-3;
-			}
-			@include m('5'){
-				background-color: $color-white;
-			}
-			@include m('7'){
 				background-color: $color-brand-2;
-			}
-		}
-	}
-	&_style-2 &{
-		@include e('part'){
-			@include m('3'){
-				background-color: $color-brand-2;
-			}
-			@include m('5'){
-				background-color: $color-white;
-			}
-			@include m('7'){
-				background-color: $color-brand-3;
-			}
-		}
-	}
-	&_style-3 &{
-		@include e('part'){
-			@at-root{
-				%style-3-brand-2{
-					background-color: $color-brand-2;
-				}
-				%style-3-brand-3{
-					background-color: $color-brand-3;
-				}
-			}
-			@include m('1'){
-				@extend %style-3-brand-2;
-			}
-			@include m('2'){
-				@extend %style-3-brand-2;
+				opacity: 0.2;
 			}
 			@include m('4'){
-				@extend %style-3-brand-2;
-			}
-			@include m('3'){
-				@extend %style-3-brand-3;
-			}
-			@include m('5'){
-				@extend %style-3-brand-3;
-			}
-			@include m('7'){
-				@extend %style-3-brand-3;
-			}
-		}
-	}
-	&_style-4 &{
-		@include e('part'){
-			@include m('3'){
-				background-color: $color-brand-3;
+				background-color: $color-white;
 			}
 			@include m('5'){
 				background-color: $color-brand-2;
 			}
 			@include m('7'){
-				background-color: $color-brand-3;
+				background-color: $color-brand-2;
 			}
 		}
 	}
+	// &_style-2 &{
+	// 	@include e('part'){
+	// 		@include m('3'){
+	// 			background-color: $color-brand-2;
+	// 		}
+	// 		@include m('5'){
+	// 			background-color: $color-white;
+	// 		}
+	// 		@include m('7'){
+	// 			background-color: $color-brand-3;
+	// 		}
+	// 	}
+	// }
+	// &_style-3 &{
+	// 	@include e('part'){
+	// 		@at-root{
+	// 			%style-3-brand-2{
+	// 				background-color: $color-brand-2;
+	// 			}
+	// 			%style-3-brand-3{
+	// 				background-color: $color-brand-3;
+	// 			}
+	// 		}
+	// 		@include m('1'){
+	// 			@extend %style-3-brand-2;
+	// 		}
+	// 		@include m('2'){
+	// 			@extend %style-3-brand-2;
+	// 		}
+	// 		@include m('4'){
+	// 			@extend %style-3-brand-2;
+	// 		}
+	// 		@include m('3'){
+	// 			@extend %style-3-brand-3;
+	// 		}
+	// 		@include m('5'){
+	// 			@extend %style-3-brand-3;
+	// 		}
+	// 		@include m('7'){
+	// 			@extend %style-3-brand-3;
+	// 		}
+	// 	}
+	// }
+	// &_style-4 &{
+	// 	@include e('part'){
+	// 		@include m('3'){
+	// 			background-color: $color-brand-3;
+	// 		}
+	// 		@include m('5'){
+	// 			background-color: $color-brand-2;
+	// 		}
+	// 		@include m('7'){
+	// 			background-color: $color-brand-3;
+	// 		}
+	// 	}
+	// }
 }

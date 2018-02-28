@@ -811,11 +811,7 @@ a, button {
 }
 
 .color-brand-2 {
-  color: #0057a2;
-}
-
-.color-brand-3 {
-  color: #4faeff;
+  color: #3a9c4a;
 }
 
 .color-black {
@@ -827,7 +823,7 @@ a, button {
 }
 
 .bg-brand-2 {
-  background-color: #0057a2;
+  background-color: #3a9c4a;
 }
 
 .offset-static-xs {
@@ -1083,47 +1079,20 @@ a, button {
 }
 
 .quadro_style-1 .quadro__part_3 {
-  background-color: #4faeff;
+  background-color: #3a9c4a;
+  opacity: .2;
+}
+
+.quadro_style-1 .quadro__part_4 {
+  background-color: #fff;
 }
 
 .quadro_style-1 .quadro__part_5 {
-  background-color: #fff;
+  background-color: #3a9c4a;
 }
 
 .quadro_style-1 .quadro__part_7 {
-  background-color: #0057a2;
-}
-
-.quadro_style-2 .quadro__part_3 {
-  background-color: #0057a2;
-}
-
-.quadro_style-2 .quadro__part_5 {
-  background-color: #fff;
-}
-
-.quadro_style-2 .quadro__part_7 {
-  background-color: #4faeff;
-}
-
-.quadro_style-3 .quadro__part_1, .quadro_style-3 .quadro__part_2, .quadro_style-3 .quadro__part_4 {
-  background-color: #0057a2;
-}
-
-.quadro_style-3 .quadro__part_3, .quadro_style-3 .quadro__part_5, .quadro_style-3 .quadro__part_7 {
-  background-color: #4faeff;
-}
-
-.quadro_style-4 .quadro__part_3 {
-  background-color: #4faeff;
-}
-
-.quadro_style-4 .quadro__part_5 {
-  background-color: #0057a2;
-}
-
-.quadro_style-4 .quadro__part_7 {
-  background-color: #4faeff;
+  background-color: #3a9c4a;
 }
 
 .icon_center {
@@ -1260,7 +1229,7 @@ a, button {
 }
 
 .icon_title-color-brand-2 .icon__title {
-  color: #0057a2;
+  color: #3a9c4a;
 }
 
 @media (min-width: 1025px) {
@@ -1268,6 +1237,11 @@ a, button {
     padding-right: 30px;
     padding-left: 30px;
   }
+}
+
+.icon__border-highlight {
+  display: inline-block;
+  border-bottom: 1px solid;
 }
 
 .quiz {
@@ -1527,7 +1501,7 @@ a, button {
 
 .btn_navigation {
   color: #fff;
-  background-color: #0065bc;
+  background-color: #41af53;
 }
 
 @media (max-width: 1024px) {
@@ -1945,19 +1919,19 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 @media (min-width: 768px) {
   .title-lg {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
 @media (min-width: 1025px) {
   .title-lg {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 
 @media (min-width: 1200px) {
   .title-lg {
-    font-size: 90px;
+    font-size: 55px;
   }
 }
 
@@ -2017,7 +1991,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
     width: 100%;
     height: 56px;
     padding: 11px 0;
-    background-color: #0057a2;
+    background-color: #3a9c4a;
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
     box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
 
@@ -2045,7 +2019,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
   }
   .nav_scrolled {
     padding: 15px;
-    background-color: #0057a2;
+    background-color: #1e5227;
   }
 }
 
@@ -2063,7 +2037,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
     height: 100%;
     padding: 0 0 100px 0;
     overflow-y: auto;
-    background-color: #0057a2;
+    background-color: #3a9c4a;
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
@@ -2320,7 +2294,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
     width: 55px;
     height: 56px;
     content: "";
-    background-color: #002e56;
+    background-color: #256430;
     opacity: 0;
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
@@ -2332,7 +2306,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
     right: 0;
     min-width: 180px;
     padding: 15px;
-    background-color: #0057a2;
+    background-color: #3a9c4a;
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
@@ -2364,14 +2338,13 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .site-header__description {
   margin-bottom: 30px;
-  font-family: FormularBold;
   font-size: 17px;
   line-height: 1.1;
 }
 
 @media (min-width: 768px) {
   .site-header__description {
-    max-width: 700px;
+    width: 80%;
     margin-right: auto;
     margin-left: auto;
     font-size: 21px;
@@ -2381,6 +2354,17 @@ input[type="checkbox"]:checked + .control__indicator:before {
 @media (max-width: 767px) {
   .site-header__description_small {
     margin-bottom: 15px;
+  }
+}
+
+.site-header__icons {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+@media (min-width: 768px) {
+  .site-header__icons {
+    margin-top: 60px;
   }
 }
 
@@ -2518,10 +2502,10 @@ input[type="checkbox"]:checked + .control__indicator:before {
   position: absolute;
   top: 0;
   left: 101%;
-  width: 27px;
-  height: 18px;
+  width: 29px;
+  height: 19px;
   content: "";
-  background: url("../img/flag-poland.png") 0 0 no-repeat;
+  background: url("../img/flag-slovakiya.png") 0 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -2558,7 +2542,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 @media (min-width: 1025px) {
   .site-header {
-    padding-top: 160px;
+    padding-top: 130px;
     padding-bottom: 120px;
   }
 }
@@ -2570,27 +2554,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
 }
 
 .site-header_thx {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100vh;
-  padding: 0;
-
-  -webkit-box-pack: center;
-
-  -webkit-justify-content: center;
-
-  -ms-flex-pack: center;
-
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.site-header_question {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2744,7 +2707,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
   width: 100%;
   height: 100%;
   content: "";
-  background-color: rgba(0, 87, 162, .84);
+  background-color: rgba(58, 156, 74, .84);
 }
 
 .benefits__quadro_1 {
@@ -2801,7 +2764,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .camp__title {
   margin-bottom: 30px;
-  color: #0057a2;
+  color: #3a9c4a;
   text-align: center;
 }
 
@@ -3003,7 +2966,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 .contact__info-link {
   display: block;
   font-family: 'FormularBold';
-  color: #0057a2;
+  color: #3a9c4a;
   text-decoration: none;
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
@@ -3011,7 +2974,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 }
 
 .contact__info-link:hover {
-  color: #4faeff;
+  color: #ff911b;
 }
 
 @media (min-width: 1025px) {
@@ -3264,7 +3227,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 }
 
 .organization__item:not(:last-child) {
-  border-bottom: 2px solid #4faeff;
+  border-bottom: 2px solid #ff911b;
 }
 
 @media (min-width: 768px) {
@@ -3332,7 +3295,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .organization__item-title {
   font-family: 'FormularBold';
-  color: #0057a2;
+  color: #3a9c4a;
 
   -webkit-flex-basis: 0;
 
@@ -3481,8 +3444,8 @@ input[type="checkbox"]:checked + .control__indicator:before {
   padding-top: 125px;
   margin-top: -125px;
   font-size: 0;
-  background-image: -webkit-linear-gradient(90deg, #0057a2 0%, #0057a2 1%, rgba(0, 87, 162, 0) 100%);
-  background-image:     -ms-linear-gradient(90deg, #0057a2 0%, #0057a2 1%, rgba(0, 87, 162, 0) 100%);
+  background-image: -webkit-linear-gradient(90deg, #3a9c4a 0%, #3a9c4a 1%, rgba(0, 87, 162, 0) 100%);
+  background-image:     -ms-linear-gradient(90deg, #3a9c4a 0%, #3a9c4a 1%, rgba(0, 87, 162, 0) 100%);
 }
 
 @media (max-width: 767px) {
@@ -3561,7 +3524,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .room__item {
   font-size: 0;
-  border: 10px solid #0057a2;
+  border: 10px solid #3a9c4a;
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
@@ -3576,7 +3539,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 }
 
 .room__item_3:hover, .room__item_4:hover {
-  border-color: #0057a2;
+  border-color: #3a9c4a;
 }
 
 .room__item-image {
@@ -3804,7 +3767,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 @media (max-width: 767px) {
   .timetable__item {
     padding-left: 15px;
-    border-left: 2px solid #ff4346;
+    border-left: 2px solid #ff911b;
   }
 }
 
@@ -3837,14 +3800,14 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .timetable__item-time {
   font-family: 'FormularBold';
-  color: #0057a2;
+  color: #3a9c4a;
 }
 
 @media (min-width: 768px) {
   .timetable__item-time {
     padding-right: 15px;
     text-align: right;
-    border-right: 2px solid #ff4346;
+    border-right: 2px solid #3a9c4a;
 
     -webkit-flex-basis: 130px;
 

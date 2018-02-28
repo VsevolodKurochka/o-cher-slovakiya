@@ -91,7 +91,7 @@
 			font-family: 'FormularBold';
 			@include transition();
 			&:hover{
-				color: $color-brand-3;
+				color: $color-brand-1;
 			}
 			@include min(md){
 				font-size: 24px;

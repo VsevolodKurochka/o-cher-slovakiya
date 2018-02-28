@@ -5,18 +5,28 @@ include ../helpers/mixins
 	+quadro('_style-1 site-header__quadro')
 	.container#site-header-container
 		+e.H1.title.title-lg.wow.fadeInUp#site-header-title
-			|Летний 
-			span.color-brand-3 языковой лагерь 
-			|в 
-			+e.SPAN.title-flag Польше
+			| Среднее образование в 
+			+e.SPAN.title-flag Словакии
 		+e.P.description.wow.fadeInUp(data-wow-delay="0.25s")
-			| За 10-14 дней Ваш ребенок совместит приятное с полезным: 
-			span.color-brand-3 отдохнет среди первозданной природы 
-			| лесов и озер, плюс 
-			span.color-brand-3 выучит польский в естественной среде
+			| Организуем 
+			span.color-brand-1 поступление Вашего ребенка 
+			| в престижный словацкий техникум или колледж с бесплатным обучением. После которых он сможет:
+		+e.icons.row
+			.col-12.col-sm-4
+				+icon('_center', 'img/icon-header-1.svg')
+					p Поступить в любой ВУЗ Словакии на любую специальность бесплатно
+					| (
+					span.color-brand-1 для выпускников 9-х классов
+					| )
+			.col-12.col-sm-4
+				+icon('_center', 'img/icon-header-2.svg')
+					p Получить 
+					+e.SPAN.border-highlight вид на жительство  
+					|  в Словакии, а значит сможет легально жить и работать в ЕС
+			.col-12.col-sm-4
+				+icon('_center', 'img/icon-header-3.png')
+					p Открыть собственный 
+					+e.SPAN.border-highlight законный бизнес 
+					|  в Европе
 		+e.button-wrapper.wow.fadeInUp(data-wow-delay="0.3s")
-			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Проконсультироваться и узнать даты заездов
-		+e.info.wow.fadeInUp(data-wow-delay="0.4s")
-			+e.A.info-link(href="#section-ukraine-problems" data-scroll)
-				+e.P.info-link-title Скрольте мышкой вниз, чтобы узнать больше!
-				+e.IMG.info-link-image(src="img/mouse.svg")
+			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Узнать больше

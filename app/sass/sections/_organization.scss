@@ -16,7 +16,7 @@
 		@include padding-y(15px);
 
 		&:not(:last-child){
-			border-bottom: 2px solid $color-brand-3;
+			border-bottom: 2px solid $color-brand-1;
 		}
 
 		@include min(sm){
