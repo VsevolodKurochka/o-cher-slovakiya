@@ -3,6 +3,14 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+	 <style>
+	/* <![CDATA[ */
+	path,
+	rect {
+		fill: #43b556;
+	}
+	/* ]]> */
+</style>
 <g>
 	<path d="M211.206,430.646c-0.049-0.014-0.098-0.027-0.147-0.04l-29.81-7.742c-2.527-0.743-4.523-2.052-4.954-2.735l-0.02-16.215
 		c0.025-0.03,0.051-0.057,0.076-0.086c10.221-12.216,15.85-28.045,15.85-44.57v-12.076c10.197-33.219,3.011-62.02-0.677-70.402

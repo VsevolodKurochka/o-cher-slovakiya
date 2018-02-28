@@ -1,0 +1,33 @@
+@include b('circle'){
+	@at-root{
+		%circle{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: 25px solid;
+			border-radius: 100%;
+			@include min(md){
+				border-width: 40px;
+			}
+		}
+	}
+	z-index: -1;
+	opacity: 0.03;
+	@extend %circle;
+
+	@include min(lg){
+		@include size(900px)
+	}
+
+	@include e('part'){
+		@include m('1'){
+			@include size(80%);
+			@extend %circle;
+		}
+		@include m('2'){
+			@include size(20%);
+			@extend %circle;
+		}
+	}
+}

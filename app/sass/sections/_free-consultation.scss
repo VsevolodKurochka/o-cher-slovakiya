@@ -1,0 +1,28 @@
+@include b('free-consultation'){
+	
+	@include min(md){
+		@include padding-y(75px);
+	}
+
+	@include e('container'){
+		@include min(md){
+			@include padding-x(60px)
+		}
+	}
+
+	@include e('title'){
+		text-align: center;
+
+		@include min(md){
+			width: 80%;
+			margin: 45px auto;
+		}
+
+		@include min(lg){
+			width: 65%;
+			@include margin-y(70px);
+		}
+
+	}
+
+}
