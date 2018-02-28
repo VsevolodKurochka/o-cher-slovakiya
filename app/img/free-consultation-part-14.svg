@@ -5,7 +5,8 @@
 	 <style>
 	/* <![CDATA[ */
 	path,
-	rect {
+	rect,
+	circle {
 		fill: #43b556;
 	}
 	/* ]]> */

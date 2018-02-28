@@ -1088,6 +1088,8 @@ a, button {
 
 .circle {
   z-index: -1;
+  width: 200px;
+  height: 200px;
   opacity: .03;
 }
 
@@ -1106,6 +1108,35 @@ a, button {
 @media (min-width: 1025px) {
   .circle, .circle__part_1, .circle__part_2 {
     border-width: 40px;
+  }
+}
+
+.circle_brand-2, .circle_brand-2 .circle__part_1, .circle_brand-2 .circle__part_2 {
+  border-color: #3a9c4a;
+}
+
+.circle_brand-2 {
+  opacity: .1;
+}
+
+@media (min-width: 480px) {
+  .circle {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .circle {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .circle {
+    width: 700px;
+    height: 700px;
   }
 }
 
@@ -2895,6 +2926,27 @@ input[type="checkbox"]:checked + .control__indicator:before {
 }
 
 .garant__footer {
+  text-align: center;
+}
+
+.himself {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: #f7f7f7;
+}
+
+@media (min-width: 768px) {
+  .himself {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.himself__content {
+  margin-bottom: 45px;
+}
+
+.himself__footer {
   text-align: center;
 }
 

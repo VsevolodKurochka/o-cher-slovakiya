@@ -1,0 +1,32 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
++b.SECTION.himself#section-himself
+	.container
+		+e.content
+			+b.answer.row.wow.fadeInLeft(data-wow-delay="0.1s")
+				+e.column._image.col-12.col-sm-6
+					+e.image(src="img/icon-himself-1.png")
+				+e.column._text.col-12.col-sm-6
+					+e.header
+						+e.P.header-title На сайте школы может быть устаревший список документов
+					+e.content
+						p Представьте - Вы всё собрали, приехали в школу, а там говорят: 
+
+						p “Справка – не такая, оценки должны быть за другие периоды, а этот документ нужно было переводить у уполномоченного переводчика”...
+
+						p Потратили время, деньги, кучу нервов и, скорее всего, отложили поступление на 1 год.
+
+			+b.answer.row.wow.fadeInRight(data-wow-delay="0.1s")
+				+e.column._image.col-12.col-sm-6
+					+e.image(src="img/icon-himself-2.png")
+				+e.column._text.col-12.col-sm-6
+					+e.header
+						+e.P.header-title Поступили - не значит поселились
+					+e.content
+						p Часто бывает еще и другое.
+						p Вы отправили документы, сдали тесты. Получили письмо что зачислены, всё хорошо. 
+						p Приехали в школу и вдруг оказывается… что для Вас нет места в общежитии!
+						p Начинаются слезы, мольбы… а потом наступает разочарование.
+		+e.footer
+			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Проконсультироваться бесплатно
