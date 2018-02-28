@@ -1,0 +1,51 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+-
+	var freeConstultationPart1 = [
+		{
+			image: 'img/free-consultation-part-1.svg',
+			title: 'Расскажем',
+			delay: '0.1s',
+			content: 'Как поступить, что для этого нужно, какие есть специальности и сколько будет стоить'
+		},
+		{
+			image: 'img/free-consultation-part-2.svg',
+			title: 'Поможем',
+			delay: '0.3s',
+			content: 'Открыть визу Вам и ребенку, организуем собеседования с представителями колледжа, поможем пройти отбор и поступить'
+		}
+	];
+
+	var freeConstultationPart2 = [
+		{
+			image: 'img/free-consultation-part-3.svg',
+			title: 'Сопроводим',
+			delay: '0.1s',
+			content: 'Вашу семью в Словакию, поселим ребенка в хорошее общежитие при колледже, поможем адаптироваться в новой среде'
+		},
+		{
+			image: 'img/free-consultation-part-4.svg',
+			title: 'Решим',
+			delay: '0.3s',
+			content: 'Любые вопросы в процессе обучения (наш представитель постоянно находится при колледже), обеспечим безопасность ребенка'
+		}
+	];
+
++b.SECTION.free-consultation.section
+	+e.container.container
+		.row
+			each part in freeConstultationPart1
+				+e.column.col-12.col-sm-6.wow.fadeInUp(data-wow-delay=part.delay)
+					+icon('_center', part.image, part.title)
+						p=part.content
+		+e.H3.title.title-md
+			| Бесплатно  
+			span.color-brand-1 проконсультируем  
+			| по всем нюансам поступления в словацкий колледж
+
+		.row
+			each part in freeConstultationPart1
+				+e.column.col-12.col-sm-6.wow.fadeInUp(data-wow-delay=part.delay)
+					+icon('_center', part.image, part.title)
+						p=part.content

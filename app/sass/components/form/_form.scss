@@ -6,6 +6,22 @@
 			@include rowOffset();
 		}
 	}
+
+	&__header{
+		margin-bottom: 15px;
+	}
+
+	&__title{
+		line-height: 1.1;
+		color: $color-black;
+		text-align: center;
+		font-family: 'FormularBold';
+		font-size: 20px;
+		@include min(lg){
+			font-size: 22px;
+		}
+	}
+
 	@include max(sm){
 		&__row{
 			#{$self}_line &{

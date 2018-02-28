@@ -44,19 +44,23 @@ $quadro-size_md: 204px;
 			}
 		}
 	}
-	// &_style-2 &{
-	// 	@include e('part'){
-	// 		@include m('3'){
-	// 			background-color: $color-brand-2;
-	// 		}
-	// 		@include m('5'){
-	// 			background-color: $color-white;
-	// 		}
-	// 		@include m('7'){
-	// 			background-color: $color-brand-3;
-	// 		}
-	// 	}
-	// }
+	&_style-2 &{
+		@include e('part'){
+			@include m('3'){
+				background-color: $color-brand-2;
+			}
+			@include m('5'){
+				background-color: $color-brand-2;
+			}
+			@include m('6'){
+				background-color: $color-white;
+			}
+			@include m('7'){
+				background-color: $color-brand-2;
+				opacity: 0.2;
+			}
+		}
+	}
 	// &_style-3 &{
 	// 	@include e('part'){
 	// 		@at-root{
