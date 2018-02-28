@@ -1,0 +1,58 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+-
+	var freeConstultationPart1 = [
+		{
+			image: 'img/free-consultation-part-5.svg',
+			delay: '0.1s',
+			content: 'В школах детей мотивируют заниматься спортом: верховая езда, велосипед, рафтинг, лыжи, теннис, баскетбол. '
+		},
+		{
+			image: 'img/free-consultation-part-6.svg',
+			delay: '0.2s',
+			content: 'У Словакии развита программа обмена. После 2-го курса дети ездят во Францию, Италию, Новую Зеландию'
+		},
+		{
+			image: 'img/free-consultation-part-7.svg',
+			delay: '0.3s',
+			content: 'Начиная со 2-го курса есть возможность дополнительно подрабатывать на местных предприятиях'
+		}
+	];
+
+	var freeConstultationPart2 = [
+		{
+			image: 'img/free-consultation-part-8.svg',
+			delay: '0.1s',
+			content: 'Возможность родителю проходить обучение'
+		},
+		{
+			image: 'img/free-consultation-part-9.svg',
+			delay: '0.2s',
+			content: 'В школах, кроме словацкого, дети изучают еще 2 языка: английский и немецкий'
+		},
+		{
+			image: 'img/free-consultation-part-10.svg',
+			delay: '0.3s',
+			content: 'После учебы ребенок получает сертификат, который признают в любой стране ЕС'
+		}
+	];
+
++b.SECTION.free-consultation.section
+	+b.circle
+		+e.part._1
+		+e.part._2
+	+e.container.container
+		.row
+			each part in freeConstultationPart1
+				+e.column.col-12.col-sm-4.wow.fadeInUp(data-wow-delay=part.delay)
+					+icon('_center', part.image, part.title)
+						p=part.content
+		+e.H3.title.title-md
+			| Но даже это   
+			span.color-brand-1 еще не всё
+		.row
+			each part in freeConstultationPart2
+				+e.column.col-12.col-sm-4.wow.fadeInUp(data-wow-delay=part.delay)
+					+icon('_center', part.image, part.title)
+						p=part.content
