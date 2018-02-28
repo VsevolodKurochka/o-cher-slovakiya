@@ -2870,6 +2870,34 @@ input[type="checkbox"]:checked + .control__indicator:before {
   }
 }
 
+.garant {
+  background: url("../img/bg-garant.jpg") 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .garant {
+    padding-top: 75px;
+    padding-bottom: 45px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .garant {
+    padding-top: 130px;
+    padding-bottom: 75px;
+  }
+}
+
+.garant__content {
+  margin-bottom: 45px;
+}
+
+.garant__footer {
+  text-align: center;
+}
+
 .question {
   padding-top: 45px;
   padding-bottom: 45px;

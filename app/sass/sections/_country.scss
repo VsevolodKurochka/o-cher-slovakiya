@@ -1,14 +1,7 @@
 @include b('country'){
 
 	@include bg('../img/bg-country.jpg');
-	
-	// &:before{
-	// 	@include pseudo();
-	// 	left: 0;
-	// 	top: 0;
-	// 	@include size(100%);
-	// 	background-color: transparentize($color-black, 0.2);
-	// }
+
 
 	@include min(sm){
 		@include padding-y(75px, 45px);

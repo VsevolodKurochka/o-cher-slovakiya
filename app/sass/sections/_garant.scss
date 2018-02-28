@@ -1,0 +1,20 @@
+@include b('garant'){
+	@include bg('../img/bg-garant.jpg');
+
+	@include min(sm){
+		@include padding-y(75px, 45px);
+	}
+
+	@include min(md){
+		@include padding-y(130px, 75px);
+	}
+
+	@include e('content'){
+		margin-bottom: 45px;
+	}
+
+	@include e('footer'){
+		text-align: center;
+	}
+
+}
