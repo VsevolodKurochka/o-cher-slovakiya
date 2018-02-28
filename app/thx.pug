@@ -1,0 +1,14 @@
+extends pug/layout
+block head
+	+add-meta('Main File', 'Description')
+block nav
+block header
+	+b.HEADER.site-header._thx
+		.v-container
+			+e.row.row
+				.v-col-12.v-col-sm-7
+					+e.H1.title.title-lg Спасибо за Вашу заявку!
+					+e.description
+						+e.P.description-title._thx Мы свяжемся с Вами в ближайшее время, чтобы договориться о времени для бесплатной консультации.
+block content
+block footer
