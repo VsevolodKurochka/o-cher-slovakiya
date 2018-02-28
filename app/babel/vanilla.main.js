@@ -26,9 +26,34 @@
 (function(){
 	document.addEventListener("DOMContentLoaded", function(){
 
-		// Cookie timer
+		// Emergence
+			emergence.init();
 
-			CookieTimer.start('timer', null, 600);
+		// WOW JS
+			var wow = new WOW();
+			wow.init();
+
+		// Scroll
+		if( exists( document.getElementById('site-header-container') ) ) {
+			const headerContainer = document.getElementById('site-header-container');
+			const headerContainerHeight = headerContainer.offsetHeight;
+			
+			const range = 200;
+
+			window.addEventListener('scroll', function(){
+				let scroll = this.scrollY;
+				if(scroll < headerContainerHeight + 100){
+					headerContainer.style.transform = `translate(0, ${scroll / 10}%)`;
+					headerContainer.style.opacity = 1 - (scroll - headerContainerHeight + range) / range;
+
+					if(headerContainer.style.opacity > '1'){
+						headerContainer.style.opacity = '1';
+					}else if(headerContainer.style.opacity < '0'){
+						headerContainer.style.opacity = '0';
+					}
+				}
+			});
+		}
 
 		const classes = {
 			active: 'active',
@@ -65,23 +90,16 @@
 			// Navigation links
 
 				var scroll = new SmoothScroll('a[href*="#"]', {
-					speed: 1000
+					offset: 70
 				});
 
-				const jsNavLinks = document.querySelectorAll('.v-nav__menu a[href*="#"]');
+				const jsNavLinks = document.querySelectorAll('.nav__menu a[href*="#"]');
 
 				for(var i = 0; i < jsNavLinks.length; i++){
 					jsNavLinks[i].addEventListener('click', function(e) {
 
-						e.preventDefault();
-
-						let vnavhref = this.getAttribute("href").replace("#", "");
-						let vnavscrollAnchor = document.getElementById(vnavhref);
-
 						removeClass(jsNavBtn, classes.active);
 						removeClass(jsNav, classes.menuActive);
-
-						//scrollTo(document.body, vnavscrollAnchor.offsetTop, 600);
 
 					});
 				}
@@ -106,20 +124,22 @@
 				}
 
 			// Window scrolling JS
-				const jsNavWrapper = document.getElementById('js-wrapper-navigation');
+				if(exists(document.getElementById('js-wrapper-navigation'))){
+					const jsNavWrapper = document.getElementById('js-wrapper-navigation');
 
-				function checkScrollY(){
-					let windowScroll = window.scrollY;
-					windowScroll > 0 ? addClass(jsNavWrapper, 'v-nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
+					function checkScrollY(){
+						let windowScroll = window.scrollY;
+						windowScroll > 0 ? addClass(jsNavWrapper, 'nav_scrolled') : removeClass(jsNavWrapper, 'nav_scrolled');
+					}
+
+					checkScrollY();
+
+					window.addEventListener("scroll", checkScrollY);
 				}
-
-				checkScrollY();
-
-				window.addEventListener("scroll", checkScrollY);
 
 
 		// Modal Window initialization
-		let themeModal = 'v-modal';
+		let themeModal = 'modal';
 		let modalBtn = document.querySelectorAll(`[data-action="${themeModal}"]`);
 		let modalBtnL = modalBtn.length;
 

@@ -37,7 +37,7 @@ mixin menu-item(isLink,href, name)
 			block
 
 mixin icon(classname, img, title)
-	+b.icon(class=classname)
+	+b.icon(class=classname)&attributes(attributes)
 		+e.inner
 			+e.header
 				+e.img(src=img)
@@ -58,7 +58,20 @@ mixin review(wrapper, name, country, img)
 				p=name
 				p=country
 
+mixin camp(image, title, map)
+	+b.camp-item
+		+e.header
+			+e.IMG.header-image(src=image)
+			+e.P.header-title=title
+		+e.map
+			+e.IMG.map-image(src=map)
+
+mixin day(time, act)
+	+e.item.wow.fadeInUp&attributes(attributes)
+		+e.P.item-time=time
+		+e.P.item-act=act
+
 mixin quadro(classname)
-	+b.quadro(class=classname)
+	+b.quadro(data-emergence="hidden" class=classname)
 		- for(var i = 1; i <= 9; i++)
 			+e.SPAN.part(class="_" + i)

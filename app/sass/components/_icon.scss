@@ -1,31 +1,30 @@
 @include b('icon'){
 	&_center{
 		text-align: center;
-		@include max(sm){
-			&:not(:last-child){
-				margin-bottom: 30px;
-			}
-		}
+		margin-bottom: 30px;
 	}
 	&_center &{
 		@include e('inner'){
 			@include min(md){
-				@include padding-x(30px);
+				@include padding-x(15px);
 			}
 		}
 		@include e('header'){
 			margin-bottom: 15px;
 			@include min(sm){
-				margin-bottom: 45px;
+				margin-bottom: 30px;
 			}
 		}
 		@include e('img'){
-			height: 90px;
+			height: 100px;
+		}
+		@include e('title'){
+			margin-top: 10px;
 		}
 	}
 	@include e('title'){
 		font-family: 'FormularBold';
-		font-size: 19px;
+		font-size: 18px;
 		line-height: 1.1;
 	}
 	&_left{
@@ -63,25 +62,19 @@
 	}
 	&_left-icon{
 		margin-bottom: 45px;
-		@include min(sm){
-			margin-bottom: 90px;
-		}
 	}
 	&_left-icon &{
 		@include e('inner'){
 			position: relative;
 		}
 		@include e('img'){
-			height: 90px;
+			height: 60px;
 		}
 		@include e('title'){
-			font-size: 30px;
+			font-size: 20px;
 			margin-bottom: 10px;
 		}
 		@include min(sm){
-			@include e('inner'){
-				min-height: 140px;
-			}
 			@include e('img'){
 				position: absolute;
 				left: 0;
@@ -91,32 +84,30 @@
 			}
 			@at-root{
 				%left-icon-padding{
-					padding-left: 110px;
+					padding-left: 100px;
 				}
 			}
 			@include e('title'){
 				@extend %left-icon-padding;
-				font-size: 30px;
+				font-size: 24px;
 			}
 			@include e('body'){
 				@extend %left-icon-padding;
 			}
 		}
-		@include min(md){
-			@include e('img'){
-				height: 140px;
-			}
-			@at-root{
-				%left-icon-padding{
-					padding-left: 180px;
-				}
-			}
-			@include e('title'){
-				@extend %left-icon-padding;
-				font-size: 45px;
-			}
-			@include e('body'){
-				@extend %left-icon-padding;
+	}
+
+	&_title-color-brand-2 &{
+		@include e('title'){
+			color: $color-brand-2;
+		}
+	}
+
+	&_fit &{
+		@include e('inner'){
+			@include min(md){
+				padding-left: 30px;
+				padding-right: 30px;
 			}
 		}
 	}

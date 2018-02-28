@@ -5,10 +5,22 @@ $quadro-size_md: 204px;
 	flex-flow: row wrap;
 	@include absolute();
 	@include size($quadro-size);
+	background-color: transparent;
+	overflow: hidden;
 	@include e('part'){
 		@include size($quadro-size / 3);
+		@include transition();
+		@for $i from 1 through 9 {
+			&_#{$i}{
+				transition-delay: (0.1 * $i) + s;
+			}
+		}
 	}
-	background-color: transparent;
+	&[data-emergence="hidden"] &{
+		@include e('part'){
+			transform: translateY(300%) rotate(90deg);
+		}
+	}
 	@include min(md){
 		@include size($quadro-size_md);
 		@include e('part'){
@@ -21,10 +33,10 @@ $quadro-size_md: 204px;
 				background-color: $color-brand-3;
 			}
 			@include m('5'){
-				background-color: $color-brand-2;
+				background-color: $color-white;
 			}
 			@include m('7'){
-				background-color: $color-brand-3;
+				background-color: $color-brand-2;
 			}
 		}
 	}
@@ -34,7 +46,7 @@ $quadro-size_md: 204px;
 				background-color: $color-brand-2;
 			}
 			@include m('5'){
-				background-color: $color-brand-2;
+				background-color: $color-white;
 			}
 			@include m('7'){
 				background-color: $color-brand-3;
@@ -68,6 +80,19 @@ $quadro-size_md: 204px;
 			}
 			@include m('7'){
 				@extend %style-3-brand-3;
+			}
+		}
+	}
+	&_style-4 &{
+		@include e('part'){
+			@include m('3'){
+				background-color: $color-brand-3;
+			}
+			@include m('5'){
+				background-color: $color-brand-2;
+			}
+			@include m('7'){
+				background-color: $color-brand-3;
 			}
 		}
 	}

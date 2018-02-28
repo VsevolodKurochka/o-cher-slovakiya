@@ -1,50 +1,73 @@
 $(document).ready(function(){
-
-	function scroll(scrollLink, speed){
-		$('html, body').animate({
-			scrollTop: scrollLink.offset().top
-		}, speed);
-		return false;
+	
+	function log(logText){
+		console.log(logText);
 	}
-	$('.anchor').click(function(e){
-		e.preventDefault();
-		scroll($( $(this).attr('href') ), 1500);
-	});
 
-	// Collapse
+	// Thank you page question
 
-		$(".js-collapse__group.active").children(".js-collapse__group-body").slideDown();
+		// Set data-index for each quiz__item
+		$('.quiz__item').each(function(index){
+			$(this).attr('data-index', index);
 
-		$('.js-collapse').on('click', '.js-collapse__group-header', function(){
-			var collapseInner = $(this).parents('.js-collapse').find('.js-collapse__group');
+			// Get data-title
+			var dataTitle = $(this).attr('data-title');
 
-			$(this)
-				.parent()
-				.toggleClass('active');
+			// Get title of quiz item
+			var quizItemTitle = $(this).find('.quiz__item-title');
 
-			$(this)
-				.next()
-				.slideToggle('slow');
+			// set him html of this data-title
+			quizItemTitle.html(dataTitle);
 
-			collapseInner
-				.not($(this).parent())
-				.removeClass('active');
+			// Get radio buttons of quiz item
+			var quizItemRadio = $(this).find('input[type="radio"]');
 
-			collapseInner
-				.children('.js-collapse__group-body')
-				.not($(this).next())
-				.slideUp("slow");
+			// Set attribute for radio buttons
+			quizItemRadio.attr('data-title', dataTitle);
 
 		});
-	// Tabs
-		$('[data-action="tab"]').click(function(){			
-			// Tab links toggle class
-				$(this).closest(".vtabs__list").children("li").removeClass('active');
-				$(this).parent().addClass('active');
-			// Show tab content
-				var tabTarget = $(this).attr('data-target');
-				$(tabTarget).fadeIn('slow');
-				$(".vtabs__content > div").not($(tabTarget)).fadeOut('slow');
+
+		// Define array for quiz answers
+		var quizArray = [];
+
+		// Radio button change
+		$('.js-quiz').change(function(){
+
+			// Get value of changed radio
+			var value = $(this).val();
+
+			// Get title of input
+			var title = $(this).attr('data-title');
+
+			// Concat title and value
+			var concat = title + ' - ' + value;
+
+			// Get length of $('.quiz__item')
+			var quizItemsLength = parseInt($('.quiz__item').length - 1);
+
+			// Get parent of changed radio
+			var quizParent = $(this).closest('.quiz__item');
+
+			// Get index of parent $('.quiz__item')
+			var quizParentIndex = parseInt(quizParent.attr('data-index'));
+
+			// Add 1 for find next $('.quiz__item')
+			var quizNextIndex = quizParentIndex + 1;
+
+			// Push to array answer
+			quizArray.push(concat);
+
+			// Switch items 
+			if(quizParentIndex < quizItemsLength){
+
+				// Remove class of parent
+				quizParent.removeClass('quiz__item_active');
+
+				// Show next element, starting from parent
+				$('.quiz__item[data-index="'+ quizNextIndex +'"]').addClass('quiz__item_active');
+			}
+
 		});
-	// Develope
+
+
 });	
