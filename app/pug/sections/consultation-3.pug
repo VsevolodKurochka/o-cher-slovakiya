@@ -1,0 +1,34 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+
++b.SECTION.consultation._2.bg
+	+quadro('_style-1 _bottom-left')
+	+quadro('_style-2 _top-right')
+	+e.container.container
+		+e.row.row
+			.col-12.col-sm-7
+				+e.H3.title.title-md
+					| Это только 2 из сотен
+					br
+					|возможных ситуаций.
+				+e.H3.title.title-md
+					span.color-brand-1 Доверьте 
+					| поступление 
+					br
+					| за границу 
+					span.color-brand-1 профессионалам
+			.col-12.col-sm-5.col-md-4
+				+e.form-cover
+					+b.FORM.form._block(action="mail.php" method="POST")
+						+e.header
+							+e.P.title Оставьте заявку и мы перезвоним
+						+e.content
+							+e.row
+								+e.INPUT.control(name="vname" type="text" placeholder="Ваше имя")
+							+e.row
+								+e.INPUT.control(name="vemail" type="email" placeholder="Ваш email")
+							+e.row
+								+e.INPUT.control(name="vphone" type="tel" placeholder="Ваш телефон")
+							+e.row
+								+e.BUTTON.submit.btn._brand-1._shadow-brand-1._size-fluid.effect._bounce-top(type="submit") Проконсультироваться<br>бесплатно
