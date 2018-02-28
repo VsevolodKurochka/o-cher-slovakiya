@@ -1,0 +1,20 @@
+@include b('steps'){
+	@include padding-y(45px);
+	background-color: #f7f7f7;
+
+	@include e('content'){
+		margin-bottom: 45px;
+	}
+
+	@include e('footer'){
+		text-align: center;
+		@include min(sm){
+			width: 80%;
+			@include margin-x(auto);
+		}
+
+		@include ee('title'){
+			margin-bottom: 30px;
+		}
+	}
+}

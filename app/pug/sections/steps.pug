@@ -1,0 +1,49 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+
+-
+	var steps = [
+		{
+			image: 'img/icon-step-1.svg',
+			title: 'Этап 1',
+			delay: '0.05s',
+			content: 'Консультируем Вас по телефону, а потом проводим интервью с ребенком, чтобы оценить насколько он готов и хочет учиться заграницей'
+		},
+		{
+			image: 'img/icon-step-2.svg',
+			title: 'Этап 2',
+			delay: '0.15s',
+			content: 'Отправляем официальный договор. Вы ознакамливаетесь, подписываете и вносите предоплату. Начинаем готовить документы для поступления'
+		},
+		{
+			image: 'img/icon-step-3.svg',
+			title: 'Этап 3',
+			delay: '0.3s',
+			content: 'Вместе выбираем специальность, школу и организовываем интервью с директором учебного заведения. Ребенка официально принимают на учебу'
+		},
+		{
+			image: 'img/icon-step-4.svg',
+			title: 'Этап 4',
+			delay: '0.3s',
+			content: 'Сопровождаем Вашу семью в Словакию. Помогаем поселить ребенка в общежитие при школе, знакомим со всеми и продолжаем поддерживать в процессе обучения'
+		}
+	];
+
++b.SECTION.steps
+	.container
+		+e.H3.title.title-md.title-section
+			| Мы помогаем на всех 
+			span.color-brand-1 этапах 
+			| поступления
+		+e.content.row
+			each step in steps
+				.col-12.col-sm-6.col-md-3
+					+icon('_center _step', step.image, step.title)
+						p=step.content
+		+e.footer
+			+e.H3.footer-title.title-md
+				| Самое удобное - Вам никуда не нужно ехать. Все интервью мы проводим  
+				span.color-brand-1 по Skype 
+				| , а документы отправляем по почте
+			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Узнать больше

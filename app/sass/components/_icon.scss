@@ -4,11 +4,6 @@
 		margin-bottom: 30px;
 	}
 	&_center &{
-		@include e('inner'){
-			@include min(md){
-				@include padding-x(15px);
-			}
-		}
 		@include e('header'){
 			margin-bottom: 15px;
 		}
@@ -29,88 +24,16 @@
 			font-size: 24px;
 		}
 	}
-	&_left{
-		margin-bottom: 30px;
-		@include min(md){
-			margin-bottom: 45px;
-		}
-	}
-	&_left &{
-		@include e('header'){
-			margin-bottom: 15px;
-		}
-		@include e('img'){
-			height: 60px;
-		}
-		
-		@include min(md){
-			@include e('header'){
-				display: flex;
-				flex-flow: row wrap;
-				align-items: center;
-			}
-			@include e('title'){
-				flex-grow: 1;
-				flex-basis: 0;
-				padding-left: 15px;
-			}
-		}
-		@include min(lg){
-			@include e('title'){
-				font-size: 21px;
-				padding-right: 30px;
-			}
-		}
-	}
-	&_left-icon{
-		margin-bottom: 45px;
-	}
-	&_left-icon &{
-		@include e('inner'){
-			position: relative;
-		}
-		@include e('img'){
-			height: 60px;
-		}
-		@include e('title'){
-			font-size: 20px;
-			margin-bottom: 10px;
-		}
-		@include min(sm){
-			@include e('img'){
-				position: absolute;
-				left: 0;
-				top: 50%;
-				transform: translateY(-50%);
-				height: 90px;
-			}
-			@at-root{
-				%left-icon-padding{
-					padding-left: 100px;
-				}
-			}
-			@include e('title'){
-				@extend %left-icon-padding;
-				font-size: 24px;
-			}
-			@include e('body'){
-				@extend %left-icon-padding;
-			}
-		}
-	}
 
-	&_title-color-brand-2 &{
-		@include e('title'){
-			color: $color-brand-2;
+	&_step &{
+		&__title{
+			background-color: $color-brand-2;
+			color: $color-white;
+			padding: 10px;
 		}
-	}
-
-	&_fit &{
-		@include e('inner'){
-			@include min(md){
-				padding-left: 30px;
-				padding-right: 30px;
-			}
+		&__body{
+			text-align: left;
+			font-size: 14px;
 		}
 	}
 
