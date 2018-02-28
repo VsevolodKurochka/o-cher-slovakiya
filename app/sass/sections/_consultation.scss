@@ -52,4 +52,10 @@
 			}
 		}
 	}
+
+	@include e('title'){
+		@include max(sm){
+			margin-bottom: 30px;
+		}
+	}
 }

@@ -1,0 +1,63 @@
+@include b('answer'){
+	&:not(:last-child){
+		margin-bottom: 45px;
+		@include min(sm){
+			margin-bottom: 90px;
+		}
+	}
+
+	@include min(sm){
+		align-items: center;
+
+		&:nth-child(odd){
+			flex-direction: row-reverse;
+		}
+	}
+
+	@include ee('column'){
+		&:not(:last-child){
+			margin-bottom: 30px;
+		}
+	}
+
+	@include ee('header'){
+		margin-bottom: 15px;
+		
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+
+		@include ee('image'){
+			height: 80px;
+			margin-right: 15px;
+			flex-basis: 80px;
+		}
+
+		@include ee('title'){
+			font-family: 'FormularBold';
+			font-size: 22px;
+			line-height: 1.1;
+			flex-basis: 0;
+			flex-grow: 1;
+			color: $color-brand-1;
+			@include min(md){
+				font-size: 24px;
+			}
+		}
+
+	}
+
+	@include ee('image'){
+		@include ee('wrapper'){
+			position: relative;
+			font-size: 0;
+		}
+	}
+
+	@include ee('content'){
+		font-size: 16px;
+		> *:not(:last-child){
+			margin-bottom: 15px;
+		}
+	}
+}

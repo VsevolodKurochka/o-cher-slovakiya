@@ -1,4 +1,4 @@
-@include b('site-header'){
+@include b('header'){
 	@include e('info'){
 		text-align: center;
 		margin-top: 45px;

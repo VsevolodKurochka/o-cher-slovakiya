@@ -8,6 +8,7 @@ $sizes: (
 		md:   24px
 	),
 	'title-md': (
+		xs:   25px,
 		sm:   30px,
 		md:   36px
 	),
@@ -37,7 +38,7 @@ $sizes: (
 		@extend %title-default;
 	}
 	&-md{
-		font-size: 25px;
+		font-size: 21px;
 		@include fs('title-md');
 		@extend %title-default;
 	}

@@ -1,4 +1,4 @@
-@include b('site-header'){
+@include b('header'){
 	position: relative;
 	@include padding-y(45px, 60px);
 	z-index: z-index('default');

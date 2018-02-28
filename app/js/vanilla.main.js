@@ -40,26 +40,26 @@ var exists = function exists(element) {
 		wow.init();
 
 		// Scroll
-		if (exists(document.getElementById('site-header-container'))) {
-			var headerContainer = document.getElementById('site-header-container');
-			var headerContainerHeight = headerContainer.offsetHeight;
+		// if (exists(document.getElementById('site-header-container'))) {
+		// 	var headerContainer = document.getElementById('site-header-container');
+		// 	var headerContainerHeight = headerContainer.offsetHeight;
 
-			var range = 200;
+		// 	var range = 200;
 
-			window.addEventListener('scroll', function () {
-				var scroll = this.scrollY;
-				if (scroll < headerContainerHeight + 100) {
-					headerContainer.style.transform = 'translate(0, ' + scroll / 10 + '%)';
-					headerContainer.style.opacity = 1 - (scroll - headerContainerHeight + range) / range;
+		// 	window.addEventListener('scroll', function () {
+		// 		var scroll = this.scrollY;
+		// 		if (scroll < headerContainerHeight + 100) {
+		// 			headerContainer.style.transform = 'translate(0, ' + scroll / 100 + '%)';
+		// 			headerContainer.style.opacity = 1 - (scroll - headerContainerHeight + range) / range;
 
-					if (headerContainer.style.opacity > '1') {
-						headerContainer.style.opacity = '1';
-					} else if (headerContainer.style.opacity < '0') {
-						headerContainer.style.opacity = '0';
-					}
-				}
-			});
-		}
+		// 			if (headerContainer.style.opacity > '1') {
+		// 				headerContainer.style.opacity = '1';
+		// 			} else if (headerContainer.style.opacity < '0') {
+		// 				headerContainer.style.opacity = '0';
+		// 			}
+		// 		}
+		// 	});
+		// }
 
 		var classes = {
 			active: 'active',

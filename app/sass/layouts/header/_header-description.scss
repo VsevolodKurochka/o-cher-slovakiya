@@ -1,4 +1,4 @@
-@include b('site-header'){
+@include b('header'){
 	@include e('description'){
 		margin-bottom: 30px;
 		font-size: 17px;

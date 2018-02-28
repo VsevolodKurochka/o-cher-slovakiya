@@ -27,6 +27,7 @@
 
 	&_step &{
 		&__title{
+			position: relative;
 			background-color: $color-brand-2;
 			color: $color-white;
 			padding: 10px;
@@ -34,6 +35,18 @@
 		&__body{
 			text-align: left;
 			font-size: 14px;
+		}
+	}
+
+	&_step:not(:last-child) &{
+		&__title{
+			&:before{
+				content: '';
+				@include absolute(50%, -30px);
+				@include size(30px, 8px);
+				margin-top: -4px;
+				background-color: $color-brand-2;
+			}
 		}
 	}
 

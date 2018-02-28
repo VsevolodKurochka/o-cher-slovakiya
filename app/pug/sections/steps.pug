@@ -38,12 +38,11 @@ include ../helpers/mixins
 			| поступления
 		+e.content.row
 			each step in steps
-				.col-12.col-sm-6.col-md-3
-					+icon('_center _step', step.image, step.title)
-						p=step.content
+				+icon('_center _step col-12 col-sm-6 col-md-3', step.image, step.title)
+					p=step.content
 		+e.footer
 			+e.H3.footer-title.title-md
 				| Самое удобное - Вам никуда не нужно ехать. Все интервью мы проводим  
 				span.color-brand-1 по Skype 
 				| , а документы отправляем по почте
-			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Узнать больше
+			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Проконсультироваться по поступлению

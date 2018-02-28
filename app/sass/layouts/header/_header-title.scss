@@ -1,4 +1,4 @@
-@include b('site-header'){
+@include b('header'){
 	@include e('title'){
 		margin-bottom: 30px;
 		@include transition();

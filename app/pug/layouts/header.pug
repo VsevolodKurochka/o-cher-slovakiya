@@ -1,10 +1,10 @@
 include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
-+b.HEADER.site-header
-	+quadro('_style-1 site-header__quadro')
-	.container#site-header-container
-		+e.H1.title.title-lg.wow.fadeInUp#site-header-title
++b.HEADER.header
+	+quadro('_style-1 header__quadro')
+	.container#header-container
+		+e.H1.title.title-lg.wow.fadeInUp#header-title
 			| Среднее образование в 
 			+e.SPAN.title-flag Словакии
 		+e.P.description.wow.fadeInUp(data-wow-delay="0.25s")
@@ -12,21 +12,19 @@ include ../helpers/mixins
 			span.color-brand-1 поступление Вашего ребенка 
 			| в престижный словацкий техникум или колледж с бесплатным обучением. После которых он сможет:
 		+e.icons.row
-			.col-12.col-sm-4
-				+icon('_center', 'img/icon-header-1.svg')
-					p Поступить в любой ВУЗ Словакии на любую специальность бесплатно
-					| (
-					span.color-brand-1 для выпускников 9-х классов
-					| )
-			.col-12.col-sm-4
-				+icon('_center', 'img/icon-header-2.svg')
-					p Получить 
-					+e.SPAN.border-highlight вид на жительство  
-					|  в Словакии, а значит сможет легально жить и работать в ЕС
-			.col-12.col-sm-4
-				+icon('_center', 'img/icon-header-3.png')
-					p Открыть собственный 
-					+e.SPAN.border-highlight законный бизнес 
-					|  в Европе
+			+icon('_center col-12 col-sm-4', 'img/icon-header-1.svg')
+				p Поступить в любой ВУЗ Словакии на любую специальность бесплатно
+				| (
+				span.color-brand-1 для выпускников 9-х классов
+				| )
+			+icon('_center col-12 col-sm-4', 'img/icon-header-2.svg')
+				p Получить 
+				+e.SPAN.border-highlight вид на жительство  
+				|  в Словакии, а значит сможет легально жить и работать в ЕС
+
+			+icon('_center col-12 col-sm-4', 'img/icon-header-3.png')
+				p Открыть собственный 
+				+e.SPAN.border-highlight законный бизнес 
+				|  в Европе
 		+e.button-wrapper.wow.fadeInUp(data-wow-delay="0.3s")
-			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Проконсультироваться по поступлению
+			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Узнать больше
