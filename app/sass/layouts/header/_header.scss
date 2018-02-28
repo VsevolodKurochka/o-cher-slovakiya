@@ -5,6 +5,7 @@
 	@include bg('../img/header.jpg');
 	color: $color-white;
 	text-align: center;
+	overflow: hidden;
 	&:before{
 		@include pseudo();
 		left: 0;

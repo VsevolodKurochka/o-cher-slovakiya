@@ -1,0 +1,23 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+
++b.SECTION.consultation.section
+	+e.container.container
+		+e.row.row
+			.col-12.col-sm-6
+				+e.H3.title.title-md
+					| Мы знаем, какие 
+					span.color-brand-2 вопросы  
+					|  крутятся у Вас в голове сейчас… Поэтому, сразу отвечаем:
+			.col-12.col-sm-6
+				+b.FORM.form._block(action="mail.php" method="POST")
+					+e.content
+						+e.row
+							+e.INPUT.control(name="vname" type="text" placeholder="Ваше имя")
+						+e.row
+							+e.INPUT.control(name="vemail" type="email" placeholder="Ваш email")
+						+e.row
+							+e.INPUT.control(name="vphone" type="tel" placeholder="Ваш телефон")
+						+e.row
+							+e.BUTTON.submit.btn._brand-1._shadow-brand-1._size-fluid.effect._bounce-top(type="submit") Проконсультироваться<br>бесплатно

@@ -1,0 +1,31 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+-
+	var questions = [
+		{
+			image: 'img/icon-question-1.svg',
+			title: '№1',
+			delay: '0.1s',
+			content: 'Да, обучение в любом государственном колледже или техникуме Словакии - бесплатно. При условии, что ребенок хотя бы на минимально-среднем уровне говорит по-словацки'
+		},
+		{
+			image: 'img/icon-question-2.svg',
+			title: '№2',
+			delay: '0.3s',
+			content: 'После школы, можно поступить в любой государственный ВУЗ - и образование там тоже бесплатное. Даже медицинское.'
+		}
+	];
++b.SECTION.question.section
+	+e.container.container
+		+e.H3.title.title-md.title-section
+			| Мы знаем, какие 
+			span.color-brand-2 вопросы  
+			|  крутятся у Вас в голове сейчас… Поэтому, сразу отвечаем:
+		.row
+			each question in questions
+				+e.column.col-12.col-sm-6.wow.fadeInUp(data-wow-delay=question.delay)
+					+icon('_center', question.image, question.title)
+						p=question.content
+		+e.footer.wow.fadeInUp(data-wow-delay="0.2s")
+			p Конечно, нюансов хватает. Как выбрать хороший техникум или колледж, какие документы подготовить, как пройти собеседование, как быстро выучить язык…

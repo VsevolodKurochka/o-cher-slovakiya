@@ -11,21 +11,23 @@
 		}
 		@include e('header'){
 			margin-bottom: 15px;
-			@include min(sm){
-				margin-bottom: 30px;
-			}
 		}
 		@include e('img'){
 			height: 100px;
 		}
 		@include e('title'){
-			margin-top: 10px;
+			margin-top: 15px;
+			margin-bottom: 15px;
 		}
 	}
 	@include e('title'){
 		font-family: 'FormularBold';
 		font-size: 18px;
 		line-height: 1.1;
+		color: $color-brand-1;
+		@include min(md){
+			font-size: 24px;
+		}
 	}
 	&_left{
 		margin-bottom: 30px;
