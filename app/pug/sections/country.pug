@@ -20,20 +20,23 @@ include ../helpers/mixins
 		}
 	];
 
-+b.SECTION.country._1
++b.SECTION.country
 	+quadro('_style-1 _bottom-left')
 	+quadro('_style-2 _top-right')
 	+e.container.container
-		+e.H3.title.title-md.title-section
+		+e.H3.title.title-md.title-section.wow.fadeInUp
 			span.color-brand-1 Словакия… 
 			|  Что приходит в голову, когда Вы слышите про эту страну?
-		.row
+		+e.icons.row
 			each country in countries
-		+e.P.description Это всё занятно, но маловажно.  Самое главное, что Вам нужно знать о Словакии:
+				.col-12.col-sm-4.wow.fadeInUp(data-wow-delay=country.delay)
+					+icon('_center', country.image)
+						p=country.content
+		+e.P.description.wow.fadeInUp Это всё занятно, но маловажно.  Самое главное, что Вам нужно знать о Словакии:
 		+e.footer
-			+e.H3.footer-title.title-md
+			+e.H3.footer-title.title-md.wow.fadeInUp
 				| Это самый доступный для обычной украинской семьи вариант обеспечить 
 				span.color-brand-1 состоятельное европейское 
 				| будущее своего ребенка
-			+e.footer-button
+			+e.footer-button.wow.fadeInUp(data-wow-delay="0.2s")
 				+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Проконсультироваться бесплатно

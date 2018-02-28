@@ -1,0 +1,46 @@
+@include b('country'){
+	position: relative;
+	@include padding-y(45px);
+	color: $color-white;
+
+	@include bg('../img/bg-country.jpg');
+	
+	&:before{
+		@include pseudo();
+		left: 0;
+		top: 0;
+		@include size(100%);
+		background-color: transparentize($color-black, 0.2);
+	}
+
+	@include min(sm){
+		@include padding-y(75px, 45px);
+	}
+
+	@include min(lg){
+		@include padding-y(130px, 75px);
+		@media screen{
+			background-attachment: fixed;
+		}
+	}
+
+	@include e('description'){
+		text-align: center;
+		font-family: 'FormularBold';
+		margin-bottom: 30px;
+	}
+
+	@include e('footer'){
+		text-align: center;
+		@include ee('title'){
+			margin-bottom: 30px;
+			@include min(md){
+				margin-bottom: 45px;
+			}
+		}
+	}
+
+	@include e('icons'){
+		margin-bottom: 45px;
+	}
+}
