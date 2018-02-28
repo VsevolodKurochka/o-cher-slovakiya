@@ -866,117 +866,6 @@ a, button {
   text-align: right;
 }
 
-.shadow {
-  position: relative;
-  z-index: 1;
-  padding: 30px 15px;
-  font-size: 16px;
-  color: #000;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 13px 50px 0px rgba(0, 0, 0, .2);
-  box-shadow: 0px 13px 50px 0px rgba(0, 0, 0, .2);
-}
-
-.shadow_background {
-  margin-right: -15px;
-  margin-left: -15px;
-  overflow: hidden;
-}
-
-.shadow_background:before {
-  position: absolute;
-  top: 50%;
-  right: -100px;
-  z-index: -1;
-  content: "";
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.shadow_background-ukraine-map:before {
-  width: 500px;
-  height: 340px;
-  background: url("../img/ukraine-map.png") 0 0 no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-
-@media (min-width: 768px) {
-  .shadow_background-ukraine-map:before {
-    right: -150px;
-    width: 804px;
-    height: 553px;
-    background: url("../img/ukraine-map-1.png") 0 0 no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-  }
-}
-
-.shadow_background-poland-arms:before {
-  background: url("../img/poland-arms.png") 0 0 no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-
-@media (min-width: 768px) {
-  .shadow_background-poland-arms:before {
-    width: 622px;
-    height: 677px;
-  }
-}
-
-.shadow__header {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.shadow__title {
-  font-family: 'FormularBold';
-}
-
-.shadow__subtitle {
-  margin-bottom: 15px;
-  font-size: 21px;
-}
-
-.shadow__title + .shadow__subtitle {
-  margin-top: 15px;
-}
-
-.shadow__content {
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.shadow__footer {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.shadow_large {
-  padding: 45px 15px;
-}
-
-@media (min-width: 1025px) {
-  .shadow_large {
-    padding-top: 60px;
-    padding-bottom: 70px;
-  }
-}
-
-.shadow_large .shadow__header {
-  margin-bottom: 60px;
-}
-
-@media (min-width: 1025px) {
-  .shadow__row_fit {
-    width: 85%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
 .quadro {
   position: absolute;
   display: -webkit-box;
@@ -1263,11 +1152,15 @@ a, button {
   }
 }
 
-.answer-column:not(:last-child) {
+.answer__column:not(:last-child) {
   margin-bottom: 30px;
 }
 
-.answer-header {
+.answer__icon {
+  max-height: 250px;
+}
+
+.answer__header {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1289,7 +1182,7 @@ a, button {
   align-items: center;
 }
 
-.answer-header-image {
+.answer__header-image {
   height: 80px;
   margin-right: 15px;
 
@@ -1300,7 +1193,7 @@ a, button {
   flex-basis: 80px;
 }
 
-.answer-header-title {
+.answer__header-title {
   font-family: 'FormularBold';
   font-size: 22px;
   line-height: 1.1;
@@ -1318,22 +1211,45 @@ a, button {
 }
 
 @media (min-width: 1025px) {
-  .answer-header-title {
-    font-size: 24px;
+  .answer__header-title {
+    font-size: 26px;
   }
 }
 
-.answer-image-wrapper {
+.answer__image-wrapper {
   position: relative;
   font-size: 0;
 }
 
-.answer-content {
+.answer__content {
   font-size: 16px;
 }
 
-.answer-content > *:not(:last-child) {
+.answer__content > *:not(:last-child) {
   margin-bottom: 15px;
+}
+
+.bg {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: #fff;
+}
+
+.bg:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(0, 0, 0, .7);
+}
+
+@media only screen and (min-width: 1200px) {
+  .bg {
+    background-attachment: fixed !important;
+  }
 }
 
 .effect:before {
@@ -2667,23 +2583,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
   opacity: .5;
 }
 
-.consultation {
-  position: relative;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  color: #fff;
-}
-
-.consultation:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  background-color: rgba(0, 0, 0, .7);
-}
-
 .consultation_1 {
   background: url("../img/bg-consultation-1.jpg") 0 0 no-repeat;
   -webkit-background-size: cover;
@@ -2700,12 +2599,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
   .consultation {
     padding-top: 170px;
     padding-bottom: 170px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .consultation {
-    background-attachment: fixed;
   }
 }
 
@@ -2901,23 +2794,9 @@ input[type="checkbox"]:checked + .control__indicator:before {
 }
 
 .country {
-  position: relative;
-  padding-top: 45px;
-  padding-bottom: 45px;
-  color: #fff;
   background: url("../img/bg-country.jpg") 0 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-}
-
-.country:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  background-color: rgba(0, 0, 0, .8);
 }
 
 @media (min-width: 768px) {
@@ -2931,12 +2810,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
   .country {
     padding-top: 130px;
     padding-bottom: 75px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .country {
-    background-attachment: fixed;
   }
 }
 

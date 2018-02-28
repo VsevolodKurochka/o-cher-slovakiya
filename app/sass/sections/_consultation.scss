@@ -1,15 +1,4 @@
 @include b('consultation'){
-	position: relative;
-	@include padding-y(60px);
-	color: $color-white;
-
-	&:before{
-		@include pseudo();
-		left: 0;
-		top: 0;
-		@include size(100%);
-		background-color: transparentize($color-black, 0.3);
-	}
 
 	@include m('1'){
 		@include bg('../img/bg-consultation-1.jpg');
@@ -23,11 +12,6 @@
 		@include padding-y(170px);
 	}
 	
-	@include min(lg){
-		@media screen{
-			background-attachment: fixed;
-		}
-	}
 
 	@include e('row'){
 		@include min(sm){

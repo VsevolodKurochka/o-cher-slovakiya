@@ -14,13 +14,17 @@
 		}
 	}
 
-	@include ee('column'){
+	@include e('column'){
 		&:not(:last-child){
 			margin-bottom: 30px;
 		}
 	}
 
-	@include ee('header'){
+	@include e('icon'){
+		max-height: 250px;
+	}
+
+	@include e('header'){
 		margin-bottom: 15px;
 		
 		display: flex;
@@ -41,20 +45,20 @@
 			flex-grow: 1;
 			color: $color-brand-1;
 			@include min(md){
-				font-size: 24px;
+				font-size: 26px;
 			}
 		}
 
 	}
 
-	@include ee('image'){
+	@include e('image'){
 		@include ee('wrapper'){
 			position: relative;
 			font-size: 0;
 		}
 	}
 
-	@include ee('content'){
+	@include e('content'){
 		font-size: 16px;
 		> *:not(:last-child){
 			margin-bottom: 15px;
