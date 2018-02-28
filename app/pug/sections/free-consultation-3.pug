@@ -1,0 +1,53 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+-
+	var freeConstultationPart1 = [
+		{
+			image: 'img/free-consultation-part-11.svg',
+			title: 'ХХХ+',
+			delay: '0.1s',
+			content: 'Украинских детей успешно поступили в словацкие школы с нашей помощью'
+		},
+		{
+			image: 'img/free-consultation-part-12.svg',
+			title: 'Каждый 3-й',
+			delay: '0.2s',
+			content: 'Поступил в ВУЗ или устроился на работу в Словакии после окончания школы/техникума'
+		}
+	];
+
+	var freeConstultationPart2 = [
+		{
+			image: 'img/free-consultation-part-13.svg',
+			title: '70%',
+			delay: '0.1s',
+			content: 'Учеников переезжают жить и работать в страны Западной Европы'
+		},
+		{
+			image: 'img/free-consultation-part-14.svg',
+			title: '7 лет',
+			delay: '0.3s',
+			content: 'Наша компания отправляет украинских детей учиться за границу. За это время было лишь 2% отказов'
+		}
+	];
+
++b.SECTION.free-consultation.section
+	+b.circle._brand-1
+		+e.part._1
+		+e.part._2
+	+e.container.container
+		.row
+			each part in freeConstultationPart1
+				+e.column.col-12.col-sm-6.wow.fadeInUp(data-wow-delay=part.delay)
+					+icon('_center', part.image, part.title)
+						p=part.content
+		+e.H3.title.title-md
+			| Подтверждаем свои слова реальными 
+			span.color-brand-1 результатами   
+			| детей
+		.row
+			each part in freeConstultationPart2
+				+e.column.col-12.col-sm-6.wow.fadeInUp(data-wow-delay=part.delay)
+					+icon('_center', part.image, part.title)
+						p=part.content
