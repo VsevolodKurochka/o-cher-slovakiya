@@ -2733,6 +2733,12 @@ input[type="checkbox"]:checked + .control__indicator:before {
   }
 }
 
+.contact__info-subtitle {
+  margin-bottom: 30px;
+  font-size: 19px;
+  line-height: 1.1;
+}
+
 .contact__info-part {
   position: relative;
   padding-left: 30px;
@@ -2793,7 +2799,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 .contact__info-link {
   display: block;
   font-family: 'FormularBold';
-  color: #3a9c4a;
+  color: #000;
   text-decoration: none;
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;

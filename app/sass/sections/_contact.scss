@@ -40,6 +40,12 @@
 				font-size: 36px;
 			}
 		}
+
+		@include ee('subtitle'){
+			font-size: 19px;
+			line-height: 1.1;
+			margin-bottom: 30px;
+		}
 		
 		@include ee('part'){
 			position: relative;
@@ -87,7 +93,7 @@
 		@include ee('link'){
 			display: block;
 			text-decoration: none;
-			color: $color-brand-2;
+			color: $color-black;
 			font-family: 'FormularBold';
 			@include transition();
 			&:hover{
