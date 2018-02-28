@@ -2677,6 +2677,12 @@ input[type="checkbox"]:checked + .control__indicator:before {
   background-size: cover;
 }
 
+.consultation_2 {
+  background: url("../img/bg-consultation-2.jpg") 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
 @media (min-width: 1025px) {
   .consultation {
     padding-top: 170px;
@@ -2713,7 +2719,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
   .consultation__form-cover:before {
     position: absolute;
     top: 15px;
-    left: -100%;
+    left: -120px;
     width: 100px;
     height: 100px;
     content: "";
@@ -3049,45 +3055,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
   }
 }
 
-.why__item:nth-child(1) .quadro {
-  right: 0;
-  bottom: -webkit-calc(100% - 68px);
-  bottom: calc(100% - 68px);
-}
-
-@media (min-width: 1025px) {
-  .why__item:nth-child(1) .quadro {
-    bottom: -webkit-calc(100% - 136px);
-    bottom: calc(100% - 136px);
-  }
-}
-
-.why__item:nth-child(2) .quadro {
-  top: -webkit-calc(100% - 68px);
-  top: calc(100% - 68px);
-  left: 0;
-}
-
-@media (min-width: 1025px) {
-  .why__item:nth-child(2) .quadro {
-    top: -webkit-calc(100% - 136px);
-    top: calc(100% - 136px);
-  }
-}
-
-.why__item:nth-child(3) .quadro {
-  right: 0;
-  bottom: -webkit-calc(100% - 68px);
-  bottom: calc(100% - 68px);
-}
-
-@media (min-width: 1025px) {
-  .why__item:nth-child(3) .quadro {
-    bottom: -webkit-calc(100% - 136px);
-    bottom: calc(100% - 136px);
-  }
-}
-
 @media (min-width: 768px) {
   .why__item {
     -webkit-box-align: center;
@@ -3113,7 +3080,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 
   -webkit-box-orient: horizontal;
 
@@ -3145,6 +3112,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
   font-family: 'FormularBold';
   font-size: 22px;
   line-height: 1.1;
+  color: #ff911b;
 
   -webkit-flex-basis: 0;
 
@@ -3157,15 +3125,9 @@ input[type="checkbox"]:checked + .control__indicator:before {
   flex-grow: 1;
 }
 
-@media (min-width: 768px) {
-  .why__item-header-title {
-    font-size: 30px;
-  }
-}
-
 @media (min-width: 1025px) {
   .why__item-header-title {
-    font-size: 36px;
+    font-size: 24px;
   }
 }
 

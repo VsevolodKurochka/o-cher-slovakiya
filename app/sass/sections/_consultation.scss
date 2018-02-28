@@ -14,6 +14,10 @@
 	@include m('1'){
 		@include bg('../img/bg-consultation-1.jpg');
 	}
+
+	@include m('2'){
+		@include bg('../img/bg-consultation-2.jpg');
+	}
 	
 	@include min(md){
 		@include padding-y(170px);
@@ -24,24 +28,6 @@
 			background-attachment: fixed;
 		}
 	}
-
-
-	// @include e('quadro'){
-	// 	@include m('1'){
-	// 		top: calc(100% - #{$quadro-size / 1.5});
-	// 		left: 0;
-	// 		@include min(md){
-	// 			top: calc(100% - #{$quadro-size_md / 1.5});
-	// 		}
-	// 	}
-	// 	@include m('2'){
-	// 		bottom: calc(100% - #{$quadro-size / 1.5});
-	// 		right: 0;
-	// 		@include min(md){
-	// 			bottom: calc(100% - #{$quadro-size_md / 1.5});
-	// 		}
-	// 	}
-	// }
 
 	@include e('row'){
 		@include min(sm){
@@ -58,7 +44,7 @@
 			@include min(sm){
 				&:before{
 					@include pseudo();
-					left: -100%;
+					left: -120px;
 					top: 15px;
 					@include size(100px);
 					@include bg('../img/consultation-arrow.svg');
