@@ -1112,6 +1112,32 @@ a, button {
   opacity: .2;
 }
 
+.quadro_bottom-left {
+  top: -webkit-calc(100% - 68px);
+  top: calc(100% - 68px);
+  left: 0;
+}
+
+@media (min-width: 1025px) {
+  .quadro_bottom-left {
+    top: -webkit-calc(100% - 136px);
+    top: calc(100% - 136px);
+  }
+}
+
+.quadro_top-right {
+  right: 0;
+  bottom: -webkit-calc(100% - 68px);
+  bottom: calc(100% - 68px);
+}
+
+@media (min-width: 1025px) {
+  .quadro_top-right {
+    bottom: -webkit-calc(100% - 136px);
+    bottom: calc(100% - 136px);
+  }
+}
+
 .icon_center {
   margin-bottom: 30px;
   text-align: center;
@@ -2661,32 +2687,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
 @media screen and (min-width: 1200px) {
   .consultation {
     background-attachment: fixed;
-  }
-}
-
-.consultation__quadro_1 {
-  top: -webkit-calc(100% - 68px);
-  top: calc(100% - 68px);
-  left: 0;
-}
-
-@media (min-width: 1025px) {
-  .consultation__quadro_1 {
-    top: -webkit-calc(100% - 136px);
-    top: calc(100% - 136px);
-  }
-}
-
-.consultation__quadro_2 {
-  right: 0;
-  bottom: -webkit-calc(100% - 68px);
-  bottom: calc(100% - 68px);
-}
-
-@media (min-width: 1025px) {
-  .consultation__quadro_2 {
-    bottom: -webkit-calc(100% - 136px);
-    bottom: calc(100% - 136px);
   }
 }
 

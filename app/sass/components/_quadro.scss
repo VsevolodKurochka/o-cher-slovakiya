@@ -61,6 +61,21 @@ $quadro-size_md: 204px;
 			}
 		}
 	}
+	
+	&_bottom-left{
+		top: calc(100% - #{$quadro-size / 1.5});
+		left: 0;
+		@include min(md){
+			top: calc(100% - #{$quadro-size_md / 1.5});
+		}
+	}
+	&_top-right{
+		bottom: calc(100% - #{$quadro-size / 1.5});
+		right: 0;
+		@include min(md){
+			bottom: calc(100% - #{$quadro-size_md / 1.5});
+		}
+	}
 	// &_style-3 &{
 	// 	@include e('part'){
 	// 		@at-root{

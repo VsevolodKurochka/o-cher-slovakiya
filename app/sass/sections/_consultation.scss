@@ -26,22 +26,22 @@
 	}
 
 
-	@include e('quadro'){
-		@include m('1'){
-			top: calc(100% - #{$quadro-size / 1.5});
-			left: 0;
-			@include min(md){
-				top: calc(100% - #{$quadro-size_md / 1.5});
-			}
-		}
-		@include m('2'){
-			bottom: calc(100% - #{$quadro-size / 1.5});
-			right: 0;
-			@include min(md){
-				bottom: calc(100% - #{$quadro-size_md / 1.5});
-			}
-		}
-	}
+	// @include e('quadro'){
+	// 	@include m('1'){
+	// 		top: calc(100% - #{$quadro-size / 1.5});
+	// 		left: 0;
+	// 		@include min(md){
+	// 			top: calc(100% - #{$quadro-size_md / 1.5});
+	// 		}
+	// 	}
+	// 	@include m('2'){
+	// 		bottom: calc(100% - #{$quadro-size / 1.5});
+	// 		right: 0;
+	// 		@include min(md){
+	// 			bottom: calc(100% - #{$quadro-size_md / 1.5});
+	// 		}
+	// 	}
+	// }
 
 	@include e('row'){
 		@include min(sm){
