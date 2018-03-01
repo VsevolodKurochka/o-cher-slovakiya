@@ -2164,8 +2164,8 @@ input[type="checkbox"]:checked + .control__indicator:before {
 }
 
 @media (min-width: 1200px) {
-  .nav__menu-item {
-    font-size: 15px;
+  .nav__menu-item a {
+    font-size: 16px;
   }
 }
 
@@ -2512,8 +2512,12 @@ input[type="checkbox"]:checked + .control__indicator:before {
   }
 }
 
-.header__title {
+.header__subtitle {
   margin-bottom: 30px;
+}
+
+.header__title {
+  margin-bottom: 15px;
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;

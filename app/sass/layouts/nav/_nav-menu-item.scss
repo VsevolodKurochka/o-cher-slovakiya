@@ -45,10 +45,11 @@
 						color: $color-brand-2;
 					}
 				}
-
 			}
 			@include min(lg){
-				font-size: 15px;
+				a{
+					font-size: 16px;
+				}
 			}
 		}
 	}
