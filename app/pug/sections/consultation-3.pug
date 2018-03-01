@@ -8,7 +8,7 @@ include ../helpers/mixins
 	+e.container.container
 		+e.row.row
 			.col-12.col-sm-7
-				+e.H3.title.title-md
+				+e.H3.title.title-md.wow.fadeInUp
 					| Это только 2 из сотен
 					br
 					|возможных ситуаций.
@@ -18,7 +18,7 @@ include ../helpers/mixins
 					br
 					| за границу 
 					span.color-brand-1 профессионалам
-			.col-12.col-sm-5.col-md-4
+			.col-12.col-sm-5.col-md-4.wow.fadeInUp(data-wow-delay="0.2s")
 				+e.form-cover
 					+b.FORM.form._block(action="mail.php" method="POST")
 						+e.header

@@ -25,7 +25,7 @@ include ../helpers/mixins
 		{
 			image: 'img/icon-step-4.svg',
 			title: 'Этап 4',
-			delay: '0.3s',
+			delay: '0.4s',
 			content: 'Сопровождаем Вашу семью в Словакию. Помогаем поселить ребенка в общежитие при школе, знакомим со всеми и продолжаем поддерживать в процессе обучения'
 		}
 	];
@@ -38,11 +38,11 @@ include ../helpers/mixins
 			| поступления
 		+e.content.row
 			each step in steps
-				+icon('_center _step col-12 col-sm-6 col-md-3', step.image, step.title)
+				+icon('_center _step col-12 col-sm-6 col-md-3 wow fadeInUp', step.image, step.title)(data-wow-delay=step.delay)
 					p=step.content
 		+e.footer
-			+e.H3.footer-title.title-md
+			+e.H3.footer-title.title-md.wow.fadeInUp
 				| Самое удобное - Вам никуда не нужно ехать. Все интервью мы проводим  
 				span.color-brand-1 по Skype 
 				| , а документы отправляем по почте
-			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Проконсультироваться по поступлению
+			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top.wow.fadeInUp(data-action="modal" data-open="#modal-form" data-wow-delay="0.2s") Проконсультироваться по поступлению

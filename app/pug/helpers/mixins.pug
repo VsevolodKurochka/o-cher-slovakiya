@@ -47,7 +47,7 @@ mixin icon(classname, img, title)
 				block
 
 mixin review(wrapper, name, country, img)
-	+b.review-item(class=wrapper)
+	+b.review-item(class=wrapper)&attributes(attributes)
 		if block
 			+e.content
 				block

@@ -7,12 +7,12 @@ include ../helpers/mixins
 	+quadro('_style-2 _top-right')
 	+e.container.container
 		+e.row.row
-			.col-12.col-sm-7
+			.col-12.col-sm-7.wow.fadeInUp
 				+e.H3.title.title-md
 					| Мы знаем, какие 
 					span.color-brand-2 вопросы  
 					|  крутятся у Вас в голове сейчас… Поэтому, сразу отвечаем:
-			.col-12.col-sm-5.col-md-4
+			.col-12.col-sm-5.col-md-4.wow.fadeInUp(data-wow-delay="0.2s")
 				+e.form-cover
 					+b.FORM.form._block(action="mail.php" method="POST")
 						+e.header
