@@ -58,11 +58,10 @@
       text-align: left;
     }
     @include min(md){
-      background-color: $color-brand-1;
-      box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.15);
+      background-color: transparent;
+      border: 2px solid $color-brand-1;
       &:before{
-        background-color: darken($color-brand-1, 10%);
-
+        background-color: $color-brand-1;
       }
     }
   }

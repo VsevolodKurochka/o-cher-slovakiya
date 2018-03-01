@@ -1475,12 +1475,11 @@ a, button {
 
 @media (min-width: 1025px) {
   .btn_navigation {
-    background-color: #ff911b;
-    -webkit-box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, .15);
-    box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, .15);
+    background-color: transparent;
+    border: 2px solid #ff911b;
   }
   .btn_navigation:before {
-    background-color: #e77800;
+    background-color: #ff911b;
   }
 }
 
@@ -2049,11 +2048,11 @@ input[type="checkbox"]:checked + .control__indicator:before {
   transition: all .5s ease;
 }
 
-.nav__menu-item a {
+.nav__menu-item-link {
   position: relative;
   display: block;
   font-size: 16px;
-  color: inherit;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -2063,7 +2062,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
   }
   .nav__menu-item a {
     padding: 10px 15px;
-    color: #fff;
   }
 }
 
@@ -2073,13 +2071,14 @@ input[type="checkbox"]:checked + .control__indicator:before {
     vertical-align: middle;
   }
   .nav__menu-item:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 10px;
   }
   .nav__menu-item a {
     padding-top: 7.5px;
     padding-bottom: 7.5px;
+    font-size: 15px;
   }
-  .nav__menu-item a:before, .nav__menu-item a:after {
+  .nav__menu-item-link:before, .nav__menu-item-link:after {
     position: absolute;
     bottom: -2px;
     width: 0%;
@@ -2087,27 +2086,38 @@ input[type="checkbox"]:checked + .control__indicator:before {
     content: "";
     background-color: #ff911b;
   }
-  .nav__menu-item a:before {
+  .nav__menu-item-link:before {
     left: 0;
   }
-  .nav__menu-item a:after {
+  .nav__menu-item-link:after {
     right: 0;
     -webkit-transition: width .8s cubic-bezier(.22, .61, .36, 1);
     -o-transition: width .8s cubic-bezier(.22, .61, .36, 1);
     transition: width .8s cubic-bezier(.22, .61, .36, 1);
   }
-  .nav__menu-item a:hover:before {
+  .nav__menu-item-link:hover:before {
     width: 100%;
     -webkit-transition: width .5s cubic-bezier(.22, .61, .36, 1);
     -o-transition: width .5s cubic-bezier(.22, .61, .36, 1);
     transition: width .5s cubic-bezier(.22, .61, .36, 1);
   }
-  .nav__menu-item a:hover:after {
+  .nav__menu-item-link:hover:after {
     width: 100%;
     background-color: transparent;
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;
+  }
+  .nav__menu-item-phone {
+    font-family: 'FormularBold';
+    color: #ff911b;
+    text-decoration: none;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .nav__menu-item-phone:hover {
+    color: #3a9c4a;
   }
 }
 

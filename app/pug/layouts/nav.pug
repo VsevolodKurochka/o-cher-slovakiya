@@ -18,6 +18,8 @@ include ../helpers/mixins
 				+e.NAV.menu.col-12.col-md-10#js-navigation
 					for item in navigation
 						+e.LI.menu-item
-							a(data-scroll href=item.link)=item.name
+							+e.A.menu-item-link(data-scroll href=item.link)=item.name
+					+e.LI.menu-item
+						+e.A.menu-item-phone(href='+38 (067) 325 57 96') +38 (067) 325 57 96
 					+e.LI.menu-item
 						+b.BUTTON.btn._navigation.effect._bounce-top(data-action="modal" data-open="#modal-form") Проконсультироваться бесплатно
