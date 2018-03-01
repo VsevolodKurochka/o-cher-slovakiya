@@ -1058,6 +1058,16 @@ a, button {
   }
 }
 
+.icon__body {
+  font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+  .icon__body {
+    font-size: 18px;
+  }
+}
+
 .icon_step .icon__title {
   position: relative;
   padding: 10px;
@@ -1070,15 +1080,17 @@ a, button {
   text-align: left;
 }
 
-.icon_step:not(:last-child) .icon__title:before {
-  position: absolute;
-  top: 50%;
-  right: -30px;
-  width: 30px;
-  height: 8px;
-  margin-top: -4px;
-  content: '';
-  background-color: #3a9c4a;
+@media (min-width: 1025px) {
+  .icon_step:not(:last-child) .icon__title:before {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    width: 30px;
+    height: 8px;
+    margin-top: -4px;
+    content: '';
+    background-color: #3a9c4a;
+  }
 }
 
 .icon__border-highlight {
@@ -1188,7 +1200,23 @@ a, button {
 }
 
 .answer__icon {
-  max-height: 250px;
+  max-height: 100px;
+}
+
+@media (min-width: 768px) {
+  .answer__icon {
+    max-height: 250px;
+  }
+}
+
+.answer__image {
+  max-height: 100px;
+}
+
+@media (min-width: 768px) {
+  .answer__image {
+    max-height: 250px;
+  }
 }
 
 .answer__header {
@@ -1475,11 +1503,18 @@ a, button {
 
 @media (min-width: 1025px) {
   .btn_navigation {
+    font-size: 13px;
     background-color: transparent;
     border: 2px solid #ff911b;
   }
   .btn_navigation:before {
     background-color: #ff911b;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn_navigation {
+    font-size: 18px;
   }
 }
 
@@ -1542,10 +1577,16 @@ a, button {
 
 .form__title {
   font-family: 'FormularBold';
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.1;
   color: #000;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .form__title {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1886,13 +1927,13 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 @media (min-width: 768px) {
   .title-md {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 
 @media (min-width: 1025px) {
   .title-md {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 
@@ -2043,17 +2084,26 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .nav__menu-item {
   display: block;
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
 }
 
-.nav__menu-item-link {
+.nav__menu-item a {
   position: relative;
   display: block;
   font-size: 16px;
-  color: #fff;
   text-decoration: none;
+}
+
+.nav__menu-item-link {
+  color: #fff;
+}
+
+.nav__menu-item-phone {
+  font-family: 'FormularBold';
+  color: #ff911b;
+  text-decoration: none;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 @media (max-width: 1024px) {
@@ -2076,7 +2126,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
   .nav__menu-item a {
     padding-top: 7.5px;
     padding-bottom: 7.5px;
-    font-size: 15px;
+    font-size: 13px;
   }
   .nav__menu-item-link:before, .nav__menu-item-link:after {
     position: absolute;
@@ -2108,16 +2158,14 @@ input[type="checkbox"]:checked + .control__indicator:before {
     -o-transition: 0s;
     transition: 0s;
   }
-  .nav__menu-item-phone {
-    font-family: 'FormularBold';
-    color: #ff911b;
-    text-decoration: none;
-    -webkit-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
-  }
   .nav__menu-item-phone:hover {
     color: #3a9c4a;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav__menu-item {
+    font-size: 15px;
   }
 }
 
@@ -2658,11 +2706,14 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .consultation__form-cover {
   position: relative;
-  padding: 30px;
+  padding: 15px;
   background-color: #fff;
 }
 
 @media (min-width: 768px) {
+  .consultation__form-cover {
+    padding: 30px;
+  }
   .consultation__form-cover:before {
     position: absolute;
     top: 15px;
@@ -2903,6 +2954,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 }
 
 .free-consultation__title {
+  margin-bottom: 30px;
   text-align: center;
 }
 

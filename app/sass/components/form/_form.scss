@@ -16,7 +16,10 @@
 		color: $color-black;
 		text-align: center;
 		font-family: 'FormularBold';
-		font-size: 20px;
+		font-size: 17px;
+		@include min(sm){
+			font-size: 20px;
+		}
 		@include min(lg){
 			font-size: 22px;
 		}

@@ -21,7 +21,17 @@
 	}
 
 	@include e('icon'){
-		max-height: 250px;
+		max-height: 100px;
+		@include min(sm){
+			max-height: 250px;
+		}
+	}
+
+	@include e('image'){
+		max-height: 100px;
+		@include min(sm){
+			max-height: 250px;
+		}
 	}
 
 	@include e('header'){

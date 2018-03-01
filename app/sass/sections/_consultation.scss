@@ -24,8 +24,9 @@
 		&-cover{
 			position: relative;
 			background-color: $color-white;
-			padding: 30px;
+			padding: 15px;
 			@include min(sm){
+				padding: 30px;
 				&:before{
 					@include pseudo();
 					left: -120px;

@@ -2,13 +2,20 @@
 	@include e('menu'){
 		@include ee('item'){
 			display: block;
-			@include transition();
-			&-link{
+			a{
 				display: block;
 				position: relative;
 				text-decoration: none;
 				font-size: 16px;
+			}
+			&-link{
 				color: $color-white;
+			}
+			&-phone{
+				color: $color-brand-1;
+				font-family: 'FormularBold';
+				text-decoration: none;
+				@include transition();
 			}
 			@include max(md){
 				margin-bottom: 10px;
@@ -25,7 +32,7 @@
 				a{
 					padding-top: 7.5px;
 					padding-bottom: 7.5px;
-					font-size: 15px;
+					font-size: 13px;
 				}
 
 				@include ee('link'){
@@ -33,16 +40,15 @@
 				}
 
 				@include ee('phone'){
-					color: $color-brand-1;
-					font-family: 'FormularBold';
-					text-decoration: none;
-					@include transition();
 
 					&:hover{
 						color: $color-brand-2;
 					}
 				}
 
+			}
+			@include min(lg){
+				font-size: 15px;
 			}
 		}
 	}
